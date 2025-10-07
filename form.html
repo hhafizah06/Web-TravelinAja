@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pemesanan - TravelinAja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Form Pemesanan TravelinAja 💗</h2>
+    <form id="bookingForm">
+      <label>Nama Lengkap</label>
+      <input type="text" name="nama" required>
+
+      <label>Nomor Telepon</label>
+      <input type="text" name="telepon" required>
+
+      <label>Destinasi Wisata</label>
+      <select name="destinasi" required>
+        <option value="">-- Pilih Destinasi --</option>
+        <option value="Raja Ampat - Rp7.500.000">Raja Ampat - Rp7.500.000</option>
+        <option value="Labuan Bajo - Rp4.500.000">Labuan Bajo - Rp4.500.000</option>
+        <option value="Pulau Komodo - Rp3.800.000">Pulau Komodo - Rp3.800.000</option>
+        <option value="Bali - Rp2.500.000">Bali - Rp2.500.000</option>
+        <option value="Bromo - Rp1.200.000">Bromo - Rp1.200.000</option>
+      </select>
+
+      <label>Jumlah Orang</label>
+      <input type="number" name="jumlah" min="1" required>
+
+      <label>Tanggal Keberangkatan</label>
+      <input type="date" name="tanggal" required>
+
+      <label>Metode Pembayaran</label>
+      <select name="pembayaran" required>
+        <option value="">-- Pilih Metode --</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="QRIS">QRIS</option>
+        <option value="E-Wallet">E-Wallet</option>
+        <option value="Cash">Cash</option>
+      </select>
+
+      <button type="submit">Kirim Pesanan 💌</button>
+    </form>
+
+    <div id="struk" class="struk" style="display:none;">
+      <h3>✅ Pemesanan Berhasil!</h3>
+      <p><strong>Nama:</strong> <span id="outNama"></span></p>
+      <p><strong>Destinasi:</strong> <span id="outDest"></span></p>
+      <p><strong>Jumlah Orang:</strong> <span id="outJumlah"></span></p>
+      <p><strong>Tanggal:</strong> <span id="outTanggal"></span></p>
+      <p><strong>Metode Pembayaran:</strong> <span id="outBayar"></span></p>
+      <p>Terima kasih telah memesan dengan <b>TravelinAja</b> 🌸</p>
+      <a href="index.html" class="btn">Kembali ke Beranda</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Hubungi Admin: <a href="https://wa.me/62895369874943" target="_blank">0895369874943</a></p>
+  </footer>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxmTqtLtbH1wn696na-zEPW4_MBXMx2rcoDBcAPxoUyBp7d1nzNUuudykfa5-eZVcL4/exec";
+    const form = document.getElementById("bookingForm");
+    const struk = document.getElementById("struk");
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch(scriptURL, { method: "POST", body: formData })
+        .then(response => {
+          if (!response.ok) throw new Error("Gagal");
+          document.getElementById("outNama").textContent = form.nama.value;
+          document.getElementById("outDest").textContent = form.destinasi.value;
+          document.getElementById("outJumlah").textContent = form.jumlah.value;
+          document.getElementById("outTanggal").textContent = form.tanggal.value;
+          document.getElementById("outBayar").textContent = form.pembayaran.value;
+          form.style.display = "none";
+          struk.style.display = "block";
+        })
+        .catch(() => alert("❌ Gagal mengirim data. Coba lagi ya!"));
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

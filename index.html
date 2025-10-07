@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelinAja — Open Trip & Travel Booking</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #fff0f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #f8a1c4, #fbcfe8);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about h2 {
+      color: #d16b8f;
+      margin-bottom: 15px;
+    }
+
+    .benefits {
+      background-color: #ffe6ef;
+      border-radius: 30px;
+      padding: 40px 20px;
+      margin: 50px auto;
+      max-width: 900px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .benefit-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .benefit {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .benefit:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .book-btn {
+      display: inline-block;
+      background-color: #f48fb1;
+      color: white;
+      text-decoration: none;
+      padding: 14px 25px;
+      border-radius: 10px;
+      margin-top: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .book-btn:hover {
+      background-color: #ec729d;
+    }
+
+    footer {
+      background-color: #f8a1c4;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>✨ TravelinAja ✨</h1>
+    <p>Temukan pengalaman liburan terbaikmu! Kami menyediakan layanan open trip ke berbagai destinasi indah di Indonesia dengan harga terjangkau dan fasilitas lengkap.</p>
+  </header>
+
+  <section class="about">
+    <h2>Tentang TravelinAja</h2>
+    <p>
+      TravelinAja hadir untuk kamu yang ingin liburan tanpa ribet! Kami menyediakan berbagai paket open trip seru ke destinasi terbaik di Indonesia. 
+      Cukup pilih destinasi, isi data, dan kamu siap berangkat. Semua kami urus dari akomodasi, transportasi, hingga itinerary.
+    </p>
+  </section>
+
+  <section class="benefits">
+    <h2>Kenapa Pilih TravelinAja?</h2>
+    <div class="benefit-list">
+      <div class="benefit">🌸 Harga Terjangkau & Transparan</div>
+      <div class="benefit">🚐 Transportasi Nyaman</div>
+      <div class="benefit">🏕️ Paket Trip Lengkap</div>
+      <div class="benefit">📸 Banyak Spot Foto Keren</div>
+      <div class="benefit">💬 Admin Responsif & Ramah</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Destinasi Populer</h2>
+    <div class="gallery">
+      <img src="images/bali.jpg" alt="Bali">
+      <img src="images/rajaampat.jpg" alt="Raja Ampat">
+      <img src="images/pulaukomodo.jpg" alt="Pulau Komodo">
+      <img src="images/labuanbajo.jpg" alt="Labuan Bajo">
+      <img src="images/bromo.jpg" alt="Bromo">
+    </div>
+
+    <a href="form.html" class="book-btn">Booking Sekarang</a>
+  </section>
+
+  <footer>
+    <p>Hubungi Admin via WhatsApp: <a href="https://wa.me/62895369874943" target="_blank">0895369874943</a></p>
+    <p>© 2025 TravelinAja — All Rights Reserved</p>
+  </footer>
+</body>
+</html>
+

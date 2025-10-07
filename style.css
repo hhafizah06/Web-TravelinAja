@@ -1,0 +1,111 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffeef2;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  color: #d16b8f;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.gallery img {
+  border-radius: 12px;
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.center {
+  text-align: center;
+  margin: 30px;
+}
+
+.btn {
+  background-color: #f48fb1;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ec729d;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #fff;
+  border-top: 1px solid #f5c9d0;
+  color: #333;
+}
+
+footer a {
+  color: #d16b8f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-container {
+  background: #fff;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 420px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: 600;
+  color: #555;
+  margin-top: 10px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f48fb1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ec729d;
+}
+
+.struk {
+  background-color: #fff0f5;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: #444;
+}
+
